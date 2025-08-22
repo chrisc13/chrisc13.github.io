@@ -1680,7 +1680,7 @@ body.is-preload #header .content .inner {
   transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
   padding: 4.5rem 2.5rem 1.5rem 2.5rem;
   position: relative;
-  width: 50rem;
+  width: 85rem;
   max-width: 100%;
   background-color: rgb(29, 29, 29);
   border-radius: 4px;
@@ -1794,4 +1794,46 @@ body.is-article-visible #footer {
 
 body.is-preload #footer {
   opacity: 0;
+}
+
+/* Frontend Projects Container */
+.projects-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 2rem !important;
+  width: 100% !important;
+  max-width: 1400px !important; /* wide but not full screen */
+  margin: 0 auto !important;
+}
+
+/* Individual Projects */
+.projects-container > div {
+  flex: 1 1 48% !important; /* two projects per row, ~48% each */
+  min-width: 320px !important;
+  padding: 1.5rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+/* Make images responsive */
+.projects-container img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  object-fit: cover !important;
+}
+
+/* Mobile fallback */
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+
+  .projects-container > div {
+    flex: 1 1 100% !important;
+  }
 }
